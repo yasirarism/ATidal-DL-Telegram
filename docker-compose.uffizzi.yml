@@ -1,7 +1,6 @@
 x-uffizzi:
   ingress:
     service: loadbalancer
-    port: 8080
 
 services:
   loadbalancer:
