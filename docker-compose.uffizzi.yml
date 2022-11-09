@@ -1,7 +1,7 @@
 x-uffizzi:
   ingress:
     service: worker
-    port: 80
+    port: 8090
 
 services:
   worker:
