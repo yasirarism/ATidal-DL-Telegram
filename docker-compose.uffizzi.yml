@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
