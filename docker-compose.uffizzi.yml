@@ -1,10 +1,10 @@
 x-uffizzi:
   ingress:
-    service: web
+    service: tidaldl
     port: 8080
 
 services:
-  web:
+  tidaldl:
     image: tidaldl:latest
     build: .
     environment:
