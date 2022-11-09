@@ -1,4 +1,4 @@
-aiohttp
+gunicorn
 pyrogram
 tgcrypto
 aiohttp
