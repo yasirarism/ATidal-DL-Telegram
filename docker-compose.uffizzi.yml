@@ -7,22 +7,21 @@ services:
   app:
     build: .
     environment:
-      TG_BOT_TOKEN: "${TG_BOT_TOKEN}"
-      APP_ID: "${APP_ID}"
-      API_HASH: "${API_HASH}"
-      USER_SESSION: "${USER_SESSION}"
-      AUTH_CHAT: "${AUTH_CHAT}"
-      ADMINS: "${ADMINS}"
-      ALLOW_DUMP: "${ALLOW_DUMP}"
-      SEARCH_CHANNEL: "${SEARCH_CHANNEL}"
-      IS_BOT_PUBLIC: "${IS_BOT_PUBLIC}"
-      TIDAL_REGION: "${TIDAL_REGION}"
+      TG_BOT_TOKEN: "5617641654:AAEI2pjjFCZuq1EPsRFVXOGAvcafwgKPcOM"
+      APP_ID: "1046625"
+      API_HASH: "c68afc924b92d73ce27708b155f1e5b4"
+      AUTH_CHAT: "-1001201566570"
+      ADMINS: "2024984460"
+      ALLOW_DUMP: "True"
+      SEARCH_CHANNEL: "-1001381073004"
+      IS_BOT_PUBLIC: "True"
+      TIDAL_REGION: "IN"
       BOT_USERNAME: "${BOT_USERNAME}"
-      OWNER_USERNAME: "${OWNER_USERNAME}"
-      DATABASE_URL: "${DATABASE_URL}"
-      LOG_CHANNEL_ID: "${LOG_CHANNEL_ID}"
-      ALLOW_OTHER_LINKS: "${ALLOW_OTHER_LINKS}"
-      MUSIC_CHANNEL_LINK: "${MUSIC_CHANNEL_LINK}"
+      OWNER_USERNAME: "@IamCUteCodes"
+      DATABASE_URL: "postgres://qocfhqrl:yTZESrTQVmNO6qccOjSXbJGmVI8OR1lT@lucky.db.elephantsql.com/qocfhqrl"
+      LOG_CHANNEL_ID: "-1001381073004"
+      ALLOW_OTHER_LINKS: "True"
+      MUSIC_CHANNEL_LINK: "https://google.com"
     deploy:
       resources:
         limits:
