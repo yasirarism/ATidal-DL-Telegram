@@ -1,5 +1,10 @@
+x-uffizzi:
+  ingress:
+    service: app
+    port: 80
+
 services:
-  worker:
+  app:
     build: .
     deploy:
       resources:
