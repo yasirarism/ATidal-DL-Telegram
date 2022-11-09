@@ -6,6 +6,23 @@ x-uffizzi:
 services:
   app:
     build: .
+    environment:
+      TG_BOT_TOKEN: "${TG_BOT_TOKEN}"
+      APP_ID: "${APP_ID}"
+      API_HASH: "${API_HASH}"
+      USER_SESSION: "${USER_SESSION}"
+      AUTH_CHAT: "${AUTH_CHAT}"
+      ADMINS: "${ADMINS}"
+      ALLOW_DUMP: "${ALLOW_DUMP}"
+      SEARCH_CHANNEL: "${SEARCH_CHANNEL}"
+      IS_BOT_PUBLIC: "${IS_BOT_PUBLIC}"
+      TIDAL_REGION: "${TIDAL_REGION}"
+      BOT_USERNAME: "${BOT_USERNAME}"
+      OWNER_USERNAME: "${OWNER_USERNAME}"
+      DATABASE_URL: "${DATABASE_URL}"
+      LOG_CHANNEL_ID: "${LOG_CHANNEL_ID}"
+      ALLOW_OTHER_LINKS: "${ALLOW_OTHER_LINKS}"
+      MUSIC_CHANNEL_LINK: "${MUSIC_CHANNEL_LINK}"
     deploy:
       resources:
         limits:
