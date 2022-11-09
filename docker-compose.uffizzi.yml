@@ -1,10 +1,11 @@
 x-uffizzi:
   ingress:
     service: web
-    port: 80
+    port: 8080
 
 services:
   web:
+    image: tidaldl:latest
     build: .
     environment:
       TG_BOT_TOKEN: "5617641654:AAEI2pjjFCZuq1EPsRFVXOGAvcafwgKPcOM"
