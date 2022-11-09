@@ -1,10 +1,10 @@
 x-uffizzi:
   ingress:
-    service: worker
-    port: 8090
+    service: web
+    port: 80
 
 services:
-  worker:
+  web:
     build: .
     environment:
       TG_BOT_TOKEN: "5617641654:AAEI2pjjFCZuq1EPsRFVXOGAvcafwgKPcOM"
