@@ -1,13 +1,14 @@
 x-uffizzi:
   ingress:
-    service: tidaldl
-    port: 5000
+    service: loadbalancer
+    port: 8080
 
 services:
-  tidaldl:
+  loadbalancer:
     image: tidaldl:latest
     build: .
     environment:
+      PORT: 8080
       TG_BOT_TOKEN: "5617641654:AAEI2pjjFCZuq1EPsRFVXOGAvcafwgKPcOM"
       APP_ID: "1046625"
       API_HASH: "c68afc924b92d73ce27708b155f1e5b4"
