@@ -1,7 +1,7 @@
 x-uffizzi:
   ingress:
     service: app
-    port: 80
+    port: 8080
 
 services:
   app:
@@ -16,8 +16,8 @@ services:
       SEARCH_CHANNEL: "-1001381073004"
       IS_BOT_PUBLIC: "True"
       TIDAL_REGION: "IN"
-      BOT_USERNAME: "${BOT_USERNAME}"
-      OWNER_USERNAME: "@IamCUteCodes"
+      BOT_USERNAME: "@YasirTidalBot"
+      OWNER_USERNAME: "@IAmCuteCodes"
       DATABASE_URL: "postgres://qocfhqrl:yTZESrTQVmNO6qccOjSXbJGmVI8OR1lT@lucky.db.elephantsql.com/qocfhqrl"
       LOG_CHANNEL_ID: "-1001381073004"
       ALLOW_OTHER_LINKS: "True"
