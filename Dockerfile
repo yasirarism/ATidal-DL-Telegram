@@ -6,7 +6,7 @@ WORKDIR /TidalDL
 RUN chmod 777 /TidalDL
 
 # Installing basic packages
-RUN apt-get update -y && apt install python3-pip apt-utils -y
+RUN apt-get update -y && apt install python3-pip apt-utils libpq-dev python-dev -y
 
 # Install Requirements
 COPY requirements.txt .
