@@ -1,6 +1,9 @@
-
+x-uffizzi:
+  ingress:
+    service: tidaldl
+    port: 8080
 services:
-  loadbalancer:
+  tidaldl:
     image: tidaldl:latest
     build: .
     environment:
