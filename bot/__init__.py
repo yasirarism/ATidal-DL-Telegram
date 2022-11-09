@@ -1,4 +1,4 @@
-import logging
+import logging, subprocess
 from config import Config
 from pyrogram import Client
 
@@ -36,4 +36,9 @@ USER = Client(
     session_string=Config.USER_SESSION,
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH
+)
+
+subprocess.Popen(
+    [f"gunicorn wserver:start_server --bind 0.0.0.0:80 --worker-class aiohttp.GunicornWebWorker"],
+    shell=True,
 )
