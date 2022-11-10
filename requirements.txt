@@ -2,6 +2,7 @@ gunicorn
 pyrogram
 tgcrypto
 aiohttp
+flask
 psycopg2
 python-dotenv
 requests==2.27.1
