@@ -1,47 +1,14 @@
-from aiohttp import web
+from flask import Flask, request
 
-routes = web.RouteTableDef()
+app = Flask(__name__)
 
-@routes.get("/")
-async def homepage(request):
+@app.route('/')
+def homepage():
+    return "<h1>See mirror-leech-telegram-bot <a href='https://www.github.com/anasty17/mirror-leech-telegram-bot'>@GitHub</a> By <a href='https://github.com/anasty17'>Anas</a></h1>"
 
-    return web.Response(
-        text="<h1>Bot hanya aktif di <a href='https://t.me/Drivecok'>@Telegram</a><br>By <a href='https://instagram.com/yourtulloh'>Yourtulloh</a></h1>",
-        content_type="text/html",
-    )
+@app.errorhandler(Exception)
+def page_not_found(e):
+    return f"<h1>404: not found! Mostly wrong input. <br><br>Error: {e}</h2>", 404
 
-async def e404_middleware(app, handler):
-    async def middleware_handler(request):
-
-        try:
-            response = await handler(request)
-            if response.status == 404:
-                return web.Response(
-                    text="<h1>404: Torrent tidak ditemukan!</h2><br><h3>Drivecok</h3>",
-                    content_type="text/html",
-                )
-            return response
-        except web.HTTPException as ex:
-            if ex.status == 404:
-                return web.Response(
-                    text="<h1>404: Torrent tidak ditemukan!</h2><br><h3>Drivecok</h3>",
-                    content_type="text/html",
-                )
-            raise
-
-    return middleware_handler
-
-async def start_server():
-
-    app = web.Application(middlewares=[e404_middleware])
-    app.add_routes(routes)
-    return app
-
-
-async def start_server_async(port=80):
-
-    app = web.Application(middlewares=[e404_middleware])
-    app.add_routes(routes)
-    runner = web.AppRunner(app)
-    await runner.setup()
-    await web.TCPSite(runner, "0.0.0.0", port).start()
+if __name__ == "__main__":
+    app.run()
