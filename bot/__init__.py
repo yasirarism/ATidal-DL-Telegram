@@ -38,7 +38,4 @@ USER = Client(
     api_hash=Config.API_HASH
 )
 
-subprocess.Popen(
-    [f"gunicorn wserver:start_server --bind 0.0.0.0:80 --worker-class aiohttp.GunicornWebWorker"],
-    shell=True,
-)
+subprocess.Popen(f"gunicorn wserver:app --bind 0.0.0.0:80", shell=True)
